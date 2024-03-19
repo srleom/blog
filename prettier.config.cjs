@@ -5,7 +5,6 @@ module.exports = {
   pluginSearchDirs: [__dirname],
   plugins: [
     'prettier-plugin-astro',
-    'prettier-plugin-svelte',
     'prettier-plugin-tailwindcss'
   ],
   overrides: [
@@ -14,8 +13,7 @@ module.exports = {
       options: {
         parser: 'astro'
       }
-    },
-    { files: '*.svelte', options: { parser: 'svelte' } }
+    }
   ],
   useTabs: true,
   singleQuote: true,
