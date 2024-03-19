@@ -1,5 +1,5 @@
 ---
-title: Test post
+title: A post of Markdown elements
 description: This post is for testing and listing a number of different markdown elements
 publishDate: 22 Feb 2023
 updatedDate: 22 Jan 2024
@@ -15,7 +15,6 @@ tags: ['test', 'markdown']
 ##### This is a H5 Heading
 
 ###### This is a H6 Heading
-
 ## Horizontal Rules
 
 ---
@@ -31,11 +30,9 @@ tags: ['test', 'markdown']
 _This is italic text_
 
 ~~Strikethrough~~
-
 ## Quotes
 
 "Double quotes" and 'single quotes'
-
 ## Blockquotes
 
 > Blockquotes can also be nested...
@@ -48,16 +45,15 @@ An example containing a clickable reference[^1] with a link to the[^3] source.
 
 Second example containing a reference[^2] with a link to the source.
 
+  
+
 [^1]: Reference first footnote with a return to content link.
 [^2]: Second reference with a link.
 [^3]: Third reference with a link
 
 If you check out this example in `src/content/post/markdown-elements/index.md`, you'll notice that the references and the heading "Footnotes" are added to the bottom of the page via the [remark-rehype](https://github.com/remarkjs/remark-rehype#options) plugin.
-
 ## Lists
-
 Unordered
-
 - Create a list by starting a line with `+`, `-`, or `*`
 
 - Sub-lists are made by indenting 2 spaces:
@@ -71,6 +67,7 @@ Unordered
 - Nulla volutpat aliquam velit
 
 - Very easy!
+
 
 Ordered
 
@@ -89,20 +86,20 @@ Start numbering with offset:
 57. foo
 
 1. bar
-
 ## Code
 
 Inline `code`
 
 Indented code
 
-    // Some comments
-    line 1 of code
-    line 2 of code
-    line 3 of code
+	// Some comments
+	line 1 of code
+	line 2 of code
+	line 3 of code
+
+  
 
 Block code "fences"
-
 ```
 
 Sample text here...
@@ -112,11 +109,17 @@ Sample text here...
 Syntax highlighting
 
 ```js
-var foo = function (bar) {
-	return bar++
-}
 
-console.log(foo(5))
+var foo = function (bar) {
+
+return bar++;
+
+};
+
+  
+
+console.log(foo(5));
+
 ```
 
 ### Expressive code examples
@@ -124,8 +127,11 @@ console.log(foo(5))
 Adding a title
 
 ```js title="file.js"
-console.log('Title example')
+
+console.log("Title example");
+
 ```
+
 
 A bash terminal
 
@@ -138,15 +144,21 @@ echo "A base terminal example"
 Highlighting code lines
 
 ```js title="line-markers.js" del={2} ins={3-4} {6}
+
 function demo() {
-	console.log('this line is marked as deleted')
 
-	// This line and the next one are marked as inserted
+console.log("this line is marked as deleted");
 
-	console.log('this is the second inserted line')
+// This line and the next one are marked as inserted
 
-	return 'this line uses the neutral default marker type'
+console.log("this is the second inserted line");
+
+  
+
+return "this line uses the neutral default marker type";
+
 }
+
 ```
 
 [Expressive Code](https://expressive-code.com/) can do a ton more than shown here, and includes a lot of [customisation](https://expressive-code.com/reference/configuration/).
@@ -162,6 +174,7 @@ function demo() {
 | engine | engine to be used for processing templates. Handlebars is the default. |
 
 | ext | extension to be used for dest files. |
+
 
 Right aligned columns
 
@@ -179,10 +192,11 @@ Right aligned columns
 
 Image in the same folder: `src/content/post/markdown-elements/logo.png`
 
+![Astro theme cactus logo](./logo.png)
+
 Image in the aliased assets folder: `src/assets/about-astro.png`
 
 ![A cartoon cactus looking at the Astro.build logo](@/assets/about-astro.png)
 
 ## Links
-
 [Content from markdown-it](https://markdown-it.github.io/)
