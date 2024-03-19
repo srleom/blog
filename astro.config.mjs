@@ -8,7 +8,7 @@ import rehypeExternalLinks from 'rehype-external-links'
 import expressiveCode from 'astro-expressive-code'
 import { expressiveCodeOptions } from './src/site.config'
 
-import vercel from '@astrojs/vercel/static'
+import vercel from '@astrojs/vercel/serverless'
 
 // https://astro.build/config
 export default defineConfig({
@@ -39,6 +39,8 @@ export default defineConfig({
 		}
 	},
 	prefetch: true,
-	output: 'static',
-	adapter: vercel()
+	output: 'server',
+	adapter: vercel({
+		webAnalytics: { enabled: true }
+	})
 })
