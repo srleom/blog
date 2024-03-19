@@ -27,7 +27,9 @@ export function getUniqueTags(posts: Array<CollectionEntry<'post'>>) {
 }
 
 /** Note: This function doesn't filter draft posts, pass it the result of getAllPosts above to do so. */
-export function getUniqueTagsWithCount(posts: Array<CollectionEntry<'post'>>): Array<[string, number]> {
+export function getUniqueTagsWithCount(
+	posts: Array<CollectionEntry<'post'>>
+): Array<[string, number]> {
 	return [
 		...getAllTags(posts).reduce(
 			(acc, t) => acc.set(t, (acc.get(t) || 0) + 1),

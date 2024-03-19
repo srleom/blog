@@ -30,7 +30,7 @@
 	setTheme(getUserPref())
 
 	// View Transitions hook to restore theme
-	document.addEventListener("astro:after-swap", () => setTheme(getUserPref()));
+	document.addEventListener('astro:after-swap', () => setTheme(getUserPref()))
 
 	// Listen for theme-change custom event
 	document.addEventListener('theme-change', (e) => {

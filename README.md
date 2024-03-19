@@ -13,4 +13,4 @@
 
 ## Template
 
-I've created a template based on this resume website I created for myself. Feel free to give it a star and fork it! 😊
+I've created a [template]() based on this resume website I created for myself. Feel free to give it a star and fork it! 😊

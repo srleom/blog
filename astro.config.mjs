@@ -8,6 +8,8 @@ import rehypeExternalLinks from 'rehype-external-links'
 import expressiveCode from 'astro-expressive-code'
 import { expressiveCodeOptions } from './src/site.config'
 
+import vercel from '@astrojs/vercel/static'
+
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://www.srleom.me',
@@ -36,5 +38,7 @@ export default defineConfig({
 			}
 		}
 	},
-	prefetch: true
+	prefetch: true,
+	output: 'static',
+	adapter: vercel()
 })
