@@ -27,6 +27,7 @@ const others = [
 
 const MAX_POSTS = 10
 const allPosts = await getAllPosts()
+console.log(allPosts)
 const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 ---
 
@@ -100,17 +101,19 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 			</p>
 		</Section>
 
-		<Section title='Posts'>
-			<ul class='flex flex-col gap-y-2'>
-				{
-					allPostsByDate.map((p) => (
-						<li class='flex flex-col gap-x-2 sm:flex-row'>
-							<PostPreview post={p} />
-						</li>
-					))
-				}
-			</ul>
-		</Section>
+		{
+			allPostsByDate.length > 0 && (
+				<Section title='Posts'>
+					<ul class='flex flex-col gap-y-2'>
+						{allPostsByDate.map((p) => (
+							<li class='flex flex-col gap-x-2 sm:flex-row'>
+								<PostPreview post={p} />
+							</li>
+						))}
+					</ul>
+				</Section>
+			)
+		}
 
 		<Section title='Experience'>
 			<Card

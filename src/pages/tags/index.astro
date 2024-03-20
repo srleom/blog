@@ -10,6 +10,7 @@ const meta = {
 	description: "A list of all the topics I've written about in my posts",
 	title: 'All Tags'
 }
+console.log(allTags)
 ---
 
 <PageLayout meta={meta}>
@@ -31,25 +32,27 @@ const meta = {
 		</Button>
 
 		<h1 class='mb-6 mt-5 text-2xl font-bold'>Tags</h1>
-
-		<ul class='flex flex-col gap-y-3'>
-			{
-				allTags.map(([tag, val]) => (
-					<li class='flex items-center gap-x-2 '>
-						<a
-							class='inline-block underline underline-offset-4 hover:text-foreground/75'
-							data-astro-prefetch
-							href={`/tags/${tag}/`}
-							title={`View posts with the tag: ${tag}`}
-						>
-							&#35;{tag}
-						</a>
-						<span class='inline-block'>
-							- {val} post{val > 1 && 's'}
-						</span>
-					</li>
-				))
-			}
-		</ul>
+		{allTags.length === 0 && <p>No posts yet.</p>}
+		{
+			allTags.length > 0 && (
+				<ul class='flex flex-col gap-y-3'>
+					{allTags.map(([tag, val]) => (
+						<li class='flex items-center gap-x-2 '>
+							<a
+								class='inline-block underline underline-offset-4 hover:text-foreground/75'
+								data-astro-prefetch
+								href={`/tags/${tag}/`}
+								title={`View posts with the tag: ${tag}`}
+							>
+								&#35;{tag}
+							</a>
+							<span class='inline-block'>
+								- {val} post{val > 1 && 's'}
+							</span>
+						</li>
+					))}
+				</ul>
+			)
+		}
 	</div>
 </PageLayout>
