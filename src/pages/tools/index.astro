@@ -1,6 +1,6 @@
 ---
 import PageLayout from '@/layouts/BaseLayout.astro'
-import StackSection from '@/components/StackSection.astro'
+import ToolSection from '@/components/ToolSection.astro'
 import Button from '@/components/Button.astro'
 
 const DESIGN = [
@@ -79,9 +79,9 @@ const DEVELOPMENT = [
 				<p>Tools and software I use daily</p>
 			</div>
 
-			<StackSection title='Design' tools={DESIGN} />
-			<StackSection title='Productivity' tools={PRODUCTIVITY} />
-			<StackSection title='Development' tools={DEVELOPMENT} />
+			<ToolSection title='Design' tools={DESIGN} />
+			<ToolSection title='Productivity' tools={PRODUCTIVITY} />
+			<ToolSection title='Development' tools={DEVELOPMENT} />
 		</div>
 	</div>
 </PageLayout>
