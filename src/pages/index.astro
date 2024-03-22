@@ -4,7 +4,7 @@ import Section from '../components/Section.astro'
 import Card from '../components/Card.astro'
 import ProjectCard from '../components/ProjectCard.astro'
 import Label from '../components/Label.astro'
-import SkillLayout from '../components/SkillLayout.astro'
+import SkillSection from '../components/SkillSection.astro'
 import PostPreview from '@/components/blog/PostPreview.astro'
 
 import { Image } from 'astro:assets'
@@ -27,12 +27,11 @@ const others = [
 
 const MAX_POSTS = 10
 const allPosts = await getAllPosts()
-console.log(allPosts)
 const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 ---
 
 <PageLayout meta={{ title: 'Home' }}>
-	<div class='flex w-full flex-col gap-y-10'>
+	<div class='flex w-full flex-col gap-y-20 sm:gap-y-10'>
 		<section class='flex flex-col items-center gap-y-7'>
 			<Image
 				src={profile}
@@ -221,13 +220,22 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 				imageClass='h-11 w-auto md:-left-[4.5rem]'
 				href='https://certificates.cs50.io/bbef01db-94b5-4de4-b7a7-f2f63d866d17.pdf?size=letter'
 			/>
+			<Card
+				as='a'
+				heading='SAF Instructor Course'
+				subheading='Trained in skills of facilitation, presentation and pedagogy'
+				date='Jan 2023 - Jan 2023'
+				imagePath='/src/assets/safti.png'
+				altText='SAFTI Military Institute Logo'
+				imageClass='h-11 w-auto md:-left-[5rem]'
+			/>
 		</Section>
 
 		<Section title='Skills'>
-			<SkillLayout title='Languages' skills={languages} />
-			<SkillLayout title='Frontend' skills={frontend} />
-			<SkillLayout title='Backend' skills={backend} />
-			<SkillLayout title='Others' skills={others} />
+			<SkillSection title='Languages' skills={languages} />
+			<SkillSection title='Frontend' skills={frontend} />
+			<SkillSection title='Backend' skills={backend} />
+			<SkillSection title='Others' skills={others} />
 		</Section>
 	</div>
 </PageLayout>

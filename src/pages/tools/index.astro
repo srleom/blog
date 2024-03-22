@@ -3,13 +3,36 @@ import PageLayout from '@/layouts/BaseLayout.astro'
 import ToolSection from '@/components/ToolSection.astro'
 import Button from '@/components/Button.astro'
 
-const DESIGN = [
+const BUSINESS = [
 	{
-		name: 'Figma',
-		description: 'Design Tool',
-		href: 'https://www.figma.com/',
-		iconPath: 'figma',
-		iconBgColour: '#000001'
+		name: 'Namelix',
+		description: 'Business name generation',
+		href: 'https://namelix.com/',
+		iconPath: 'namelix'
+	},
+	{
+		name: 'Brandmark',
+		description: 'Logo generation',
+		href: 'https://brandmark.io/',
+		iconPath: 'brandmark'
+	},
+	{
+		name: 'Instant Domains',
+		description: 'Check domain availability',
+		href: 'https://instantdomains.com/',
+		iconPath: 'instantdomains'
+	},
+	{
+		name: 'DimeADozen',
+		description: 'AI-powered business validation',
+		href: 'https://www.dimeadozen.ai/',
+		iconPath: 'dimeadozen'
+	},
+	{
+		name: 'Startups.gallery',
+		description: 'Discover promising startups',
+		href: 'https://startups.gallery/',
+		iconPath: 'startupsgallery'
 	}
 ]
 
@@ -18,22 +41,107 @@ const PRODUCTIVITY = [
 		name: 'Arc',
 		description: 'Browser',
 		href: 'https://arc.net/',
-		iconPath: 'arc',
-		iconBgColour: '#414350'
+		iconPath: 'arc'
+	},
+
+	{
+		name: 'Perplexity',
+		description: 'AI-powered search',
+		href: 'https://www.perplexity.ai/',
+		iconPath: 'perplexity'
 	},
 	{
 		name: 'Notion',
-		description: 'Note Taking',
+		description: 'Note taking',
 		href: 'https://www.notion.so/product',
-		iconPath: 'notion',
-		iconBgColour: '#EFEFEE'
+		iconPath: 'notion'
 	},
 	{
 		name: 'Obsidian',
-		description: 'Long-form Writing',
+		description: 'Long-form writing',
 		href: 'https://obsidian.md/',
-		iconPath: 'obsidian',
-		iconBgColour: '#7A3EE8'
+		iconPath: 'obsidian'
+	},
+	{
+		name: 'Libby',
+		description: 'Library e-books & audiobooks',
+		href: 'https://libbyapp.com/',
+		iconPath: 'libby'
+	},
+	{
+		name: 'Morgen',
+		description: 'Calendar',
+		href: 'https://www.morgen.so/',
+		iconPath: 'morgen'
+	}
+]
+
+const COMMUNITY = [
+	{
+		name: 'LinkedIn',
+		description: 'Professional networking',
+		href: 'https://www.linkedin.com/',
+		iconPath: 'linkedin'
+	},
+	{
+		name: 'Discord',
+		description: 'Communities',
+		href: 'https://discord.com/',
+		iconPath: 'discord'
+	},
+	{
+		name: 'Luma',
+		description: 'Events',
+		href: 'https://lu.ma/',
+		iconPath: 'luma'
+	},
+	{
+		name: 'Wellfound',
+		description: 'Find jobs & internships at startups',
+		href: 'https://wellfound.com/',
+		iconPath: 'wellfound'
+	}
+]
+
+const DESIGN = [
+	{
+		name: 'Figma',
+		description: 'Design tool',
+		href: 'https://www.figma.com/',
+		iconPath: 'figma'
+	},
+	{
+		name: 'Fotor',
+		description: 'Image editing',
+		href: 'https://fotor.com/',
+		iconPath: 'fotor'
+	},
+	{
+		name: 'Icônes',
+		description: 'Icons',
+		href: 'https://icones.js.org/',
+		iconPath: 'icones'
+	}
+]
+
+const DESIGN_INSPIRATION = [
+	{
+		name: 'Framer Templates',
+		description: 'Inspiration',
+		href: 'https://www.framer.com/templates/',
+		iconPath: 'framer'
+	},
+	{
+		name: 'Made in Webflow',
+		description: 'Inspiration',
+		href: 'https://webflow.com/made-in-webflow',
+		iconPath: 'webflow'
+	},
+	{
+		name: 'Dribbble',
+		description: 'Inspiration',
+		href: 'https://dribbble.com/',
+		iconPath: 'dribbble'
 	}
 ]
 
@@ -42,15 +150,67 @@ const DEVELOPMENT = [
 		name: 'VS Code',
 		description: 'IDE',
 		href: 'https://code.visualstudio.com/',
-		iconPath: 'vscode',
-		iconBgColour: '#2C2C32'
+		iconPath: 'vscode'
 	},
 	{
 		name: 'ChatGPT',
 		description: 'AI',
 		href: 'https://chat.openai.com/',
-		iconPath: 'chatgpt',
-		iconBgColour: '#06A67F'
+		iconPath: 'chatgpt'
+	}
+]
+
+const TECH_STACK = [
+	{
+		name: 'SvelteKit',
+		description: 'Web apps',
+		href: 'https://kit.svelte.dev/',
+		iconPath: 'sveltekit'
+	},
+	{
+		name: 'Astro',
+		description: 'Content-heavy sites',
+		href: 'https://astro.build/',
+		iconPath: 'astro'
+	},
+	{
+		name: 'Tailwind',
+		description: 'Utility CSS classes',
+		href: 'https://tailwindcss.com/',
+		iconPath: 'tailwind'
+	},
+	{
+		name: 'shadcn',
+		description: 'UI Library',
+		href: 'https://www.shadcn-svelte.com/',
+		iconPath: 'shadcn'
+	},
+	{
+		name: 'Supabase',
+		description: 'Database',
+		href: 'https://supabase.com/',
+		iconPath: 'supabase'
+	},
+	{
+		name: 'Lucia',
+		description: 'Auth',
+		href: 'https://lucia-auth.com/',
+		iconPath: 'lucia'
+	}
+]
+
+const DEPLOYMENT = [
+	{
+		name: 'Vercel',
+		description: 'Serverless hosting',
+		href: 'https://vercel.com/',
+		iconPath: 'vercel'
+	},
+	{
+		name: 'Namecheap',
+		description: 'Domain registrar',
+		href: 'https://www.namecheap.com/',
+		iconPath: 'namecheap'
 	}
 ]
 ---
@@ -79,9 +239,14 @@ const DEVELOPMENT = [
 				<p>Tools and software I use daily</p>
 			</div>
 
-			<ToolSection title='Design' tools={DESIGN} />
+			<ToolSection title='Business' tools={BUSINESS} />
 			<ToolSection title='Productivity' tools={PRODUCTIVITY} />
+			<ToolSection title='Community' tools={COMMUNITY} />
+			<ToolSection title='Design' tools={DESIGN} />
+			<ToolSection title='Design Inspiration' tools={DESIGN_INSPIRATION} />
 			<ToolSection title='Development' tools={DEVELOPMENT} />
+			<ToolSection title='Tech Stack' tools={TECH_STACK} />
+			<ToolSection title='Deployment' tools={DEPLOYMENT} />
 		</div>
 	</div>
 </PageLayout>
